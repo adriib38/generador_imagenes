@@ -5,7 +5,7 @@
         list($text_r, $text_g, $text_b) = sscanf($_GET["color"], "#%02x%02x%02x");
         list($bg_r, $bg_g, $bg_b) = sscanf($_GET["bg_color"], "#%02x%02x%02x");
 
-       
+        header("Content-Type: image/png");
         $im = @imagecreate(110, 30)
             or die("Cannot Initialize new GD image stream");
             
